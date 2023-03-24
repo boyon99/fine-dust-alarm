@@ -1,5 +1,4 @@
-$container-width: 300px;
-$container-height: 500px;
+@import url(../config/_variables.scss);
 
 .App {
   width: 100vw;

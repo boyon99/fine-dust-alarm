@@ -1,4 +1,4 @@
-import './App.scss';
+import './styles/App.scss';
 import React, { } from 'react';
 import { Reset } from 'styled-reset';
 import Tab from './components/Tab';
