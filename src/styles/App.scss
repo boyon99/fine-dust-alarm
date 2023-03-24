@@ -3,13 +3,22 @@
   height: 100vw;
   display: flex;
   .container {
-    background-color: #d5d1d1;
+    position: relative;
+    border-radius: 10px;
+    background-color: #caedee;
     width: $container-width;
     height: $container-height;
     margin: 100px auto 0px auto;
     .content {
       width: $container-width;
-      height: $container-height - $tabs-height;
+      height: $container-height - $tabs-height - 45px;
+    }
+    .tab-container {
+      position: fixed;
+      bottom: 163px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow: hidden;
     }
   }
 }

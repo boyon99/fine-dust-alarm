@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { } from 'react';
 import '../styles/Tab.scss'
 import { useNavigate } from 'react-router-dom'
 
@@ -20,10 +20,11 @@ const tabName = [
     navi: '/favorites'
   }]
 
-const Tab = () => {
+const Tab = ({ inner }) => {
+
   let navigator = useNavigate()
   return (
-    <div className='tabs'>
+    <div className={inner}>
       {
         tabName.map((arr, i) => {
           return (
@@ -37,5 +38,9 @@ const Tab = () => {
     </div>
   );
 };
+
+Tab.defaultProps = {
+  inner: 'none'
+}
 
 export default Tab;
