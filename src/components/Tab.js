@@ -5,17 +5,17 @@ import { useNavigate } from 'react-router-dom'
 const tabName = [
   {
     title: "내 지역보기",
-    src: "https://img.icons8.com/cotton/64/null/romantic-place--v1.png",
+    src: "https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/null/external-house-location-xnimrodx-lineal-gradient-xnimrodx.png",
     width: "30px",
     navi: '/'
   }, {
     title: "전체지도보기",
-    src: "https://img.icons8.com/cotton/64/null/map.png",
+    src: "https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/null/external-map-location-xnimrodx-lineal-gradient-xnimrodx-2.png",
     width: "32px",
     navi: '/fullmap'
   }, {
     title: "즐겨찾기",
-    src: "https://img.icons8.com/cotton/64/null/favorite-heart--v1.png",
+    src: "https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/null/external-favorite-location-xnimrodx-lineal-gradient-xnimrodx.png",
     width: "32px",
     navi: '/favorites'
   }]
