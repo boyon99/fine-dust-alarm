@@ -1,8 +1,26 @@
-@import url(../config/_variables.scss);
-
-.tab {
+.tabs {
   width: $container-width;
-  height: 50px;
-  background-color: antiquewhite;
+  height: $tabs-height;
   display: flex;
+  .tab {
+    display: flex;
+    flex-direction: column;
+    width: $container-width / 3;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    img {
+      margin-bottom: 7px;
+    }
+    &:hover {
+      background-color: rgb(20, 28, 86);
+      color: #fff;
+    }
+  }
+  .tab-0 {
+    img {
+      margin: 4px 0 6px 0;
+    }
+  }
 }
