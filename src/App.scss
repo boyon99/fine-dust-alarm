@@ -1,0 +1,15 @@
+$container-width: 300px;
+$container-height: 500px;
+
+.App {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  .container {
+    background-color: #d5d1d1;
+    width: $container-width;
+    height: $container-height;
+    margin: auto auto;
+    transform: translateY(-30px);
+  }
+}
