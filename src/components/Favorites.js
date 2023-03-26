@@ -4,12 +4,10 @@ import Card from './Card';
 import Data from '../data/data.json'
 import { useSelector } from 'react-redux';
 
-
 const Favorites = () => {
 
   let select = useSelector((state) => { return state.selectFavorites })
   let [data] = useState(Data.response.body.items)
-
 
   let cardData = data.filter((arr) => {
     if (select.includes(arr.stationName)) return true
