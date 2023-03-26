@@ -24,12 +24,13 @@ $gradient-color: linear-gradient(-60deg, #192059 0%, #18464d 100%);
 }
 
 .true {
-  animation: fadeInDown 1.5s;
+  animation: fadeInDown 2s;
   width: $container-width;
   height: $tabs-height;
   display: flex;
   border-radius: 10px;
   background-image: $gradient-color;
+
   .tab {
     color: #fff;
     background-color: transparent;
@@ -72,7 +73,7 @@ $gradient-color: linear-gradient(-60deg, #192059 0%, #18464d 100%);
 
 .false {
   opacity: 0;
-  animation: fadeInUp 1.5s;
+  animation: fadeInUp 2s;
   width: $container-width;
   height: $tabs-height;
   display: flex;

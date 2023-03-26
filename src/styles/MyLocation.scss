@@ -1,31 +1,34 @@
-.favorites {
-  display: flex;
-  flex-direction: column;
+.mylocation {
+  display: block;
   .dropdown-container {
     position: relative;
     h1 {
+      position: absolute;
       font-size: 16px;
       font-weight: bolder;
       width: 100px;
-      margin: 22px 0 0 10px;
+      top: 22px;
+      left: 10px;
     }
     .dropdown-1 {
       position: absolute;
       right: 75px;
       top: 5px;
       opacity: 0.8;
+      z-index: 15;
     }
     .dropdown-2 {
       position: absolute;
       right: 8px;
       top: 5px;
       opacity: 0.8;
+      z-index: 15;
     }
   }
   .cards {
-    display: block;
+    position: absolute;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 50px;
     height: 450px;
     overflow: scroll;
   }

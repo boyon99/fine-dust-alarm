@@ -1,7 +1,7 @@
 $dropdown-color: rgba(#192059, 1);
+$dropdown-width: 60px;
 
 .menu {
-  z-index: 999;
   display: inline-block;
   margin: 0 auto;
   margin-top: 10px;
@@ -12,7 +12,8 @@ $dropdown-color: rgba(#192059, 1);
   div {
     display: block;
     margin: 0;
-    width: 50px;
+    min-height: 12px;
+    width: $dropdown-width;
     font-size: 12px;
     padding: 7px 0;
     text-decoration: none;
@@ -42,7 +43,6 @@ $dropdown-color: rgba(#192059, 1);
     &.parent {
       &:before {
         content: '';
-        z-index: 200;
         position: absolute;
         top: 113%;
         left: 50%;
@@ -84,20 +84,18 @@ $dropdown-color: rgba(#192059, 1);
     transform-origin: top center;
     transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.59, 1.21),
       opacity 0.1s 0.1s;
-
-    z-index: 100;
     list-style-type: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 50px;
+    width: $dropdown-width;
     margin: 15px 0 0 0;
     border-radius: 5px;
     padding: 10px 0;
     background-color: rgba($color: #a9b6c5, $alpha: 1);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     text-align: left;
-    max-height: 400px;
+    max-height: 330px;
     overflow: scroll;
 
     li {
