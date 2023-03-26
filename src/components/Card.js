@@ -13,11 +13,13 @@ const Card = ({ data }) => {
   })
   let [star, setStar] = useState(0)
 
-  let pm25GradeNum = parseInt(data.pm25Grade)
-  let pm10GradeNum = parseInt(data.pm10Grade)
+  // let pm25GradeNum = parseInt(data.pm25Grade)
+  // let pm10GradeNum = parseInt(data.pm10Grade)
 
-  let pm25 = data.pm25Grade === null ? pm25grade[0] : pm25grade[pm25GradeNum]
-  let pm10 = data.pm10Grade === null ? pm25grade[0] : pm25grade[pm10GradeNum]
+  // let pm25 = data.pm25Grade === null ? pm25grade[0] : pm25grade[pm25GradeNum]
+  // let pm10 = data.pm10Grade === null ? pm25grade[0] : pm25grade[pm10GradeNum]
+  let pm25 = "좋음"
+  let pm10 = "좋음"
 
   useEffect(() => {
     setStar(likeFilter.length)
