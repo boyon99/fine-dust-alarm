@@ -13,6 +13,9 @@ const Card = ({ data }) => {
   })
   let [star, setStar] = useState(0)
 
+  let pm25 = pm25grade[+data.pm25Grade]
+  let pm10 = pm25grade[+data.pm10Grade]
+
   useEffect(() => {
     setStar(likeFilter.length)
   }
@@ -32,13 +35,13 @@ const Card = ({ data }) => {
         {star === 1 ? <img src="./after.png" /> : <img src="./before.png" />}
       </button>
       <div className="card-text">
-        <div className={"pm10 " + pm25grade[Number(data.pm25Grade)]}>
-          <p className='pm10-grade'><span>{pm25grade[+data.pm25Grade]}</span></p>
+        <div className={"pm10 " + pm25}>
+          <p className='pm10-grade'><span>{pm25}</span></p>
           <p className='pm10-value'>{data.pm10Value}</p>
         </div>
         <div className="title-total">
           <div className="title">{data.stationName + " "}<span>{data.sidoName}</span></div>
-          <div className='all'>미세먼지 <span className={pm25grade[Number(data.pm10Grade)]}> {pm25grade[+data.pm10Grade]}</span> <br />초미세먼지 <span className={pm25grade[+data.pm25Grade]}>{pm25grade[+data.pm25Grade]}</span></div>
+          <div className='all'>미세먼지 <span className={pm10}> {pm10}</span> <br />초미세먼지 <span className={pm25grade[+data.pm25Grade]}>{pm25}</span></div>
           <div className="dataTime">&#40; {data.dataTime} 기준 &#41;</div>
         </div>
 
