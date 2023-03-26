@@ -13,8 +13,8 @@ const Card = ({ data }) => {
   })
   let [star, setStar] = useState(0)
 
-  let pm25 = data.pm25Grade === null ? pm25grade[0] : pm25grade[Number(data.pm25Grade)]
-  let pm10 = data.pm10Grade === null ? pm25grade[0] : pm25grade[Number(data.pm10Grade)]
+  let pm25 = data.pm25Grade === null ? pm25grade[0] : (data.pm25Grade === undefined ? pm25grade[0] : pm25grade[Number(data.pm25Grade)])
+  let pm10 = data.pm10Grade === null ? pm25grade[0] : (data.pm10Grade === undefined ? pm25grade[0] : pm25grade[Number(data.pm10Grade)])
 
   useEffect(() => {
     setStar(likeFilter.length)
