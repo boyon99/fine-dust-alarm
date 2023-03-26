@@ -3,9 +3,10 @@ import '../styles/Dropdown.scss'
 import { setSelectLocation1, setSelectLocation2 } from '../store/selectLocation';
 import { useDispatch, useSelector } from 'react-redux';
 
-const Dropdown = ({ list, num }) => {
-  let title = useSelector((state) => { return state.selectLocation })
+const Dropdown = ({ list, num, change }) => {
   let dispatch = useDispatch();
+  let title = useSelector((state) => { return state.selectLocation })
+
   if (list) {
     return (
       <div>
@@ -18,8 +19,15 @@ const Dropdown = ({ list, num }) => {
                   <li key={i}><button onClick={() => {
                     if (num === 0) {
                       dispatch(setSelectLocation1(arr))
-                    } else {
+                      if (change) {
+                        localStorage.setItem('sidoData', arr)
+                      }
+                    }
+                    if (num === 1) {
                       dispatch(setSelectLocation2(arr))
+                      if (change) {
+                        localStorage.setItem('stationData', arr)
+                      }
                     }
                   }}>{arr}</button></li>
                 )
