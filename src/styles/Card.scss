@@ -1,0 +1,109 @@
+.card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(78, 78, 84, 0.5);
+  width: $container-width -20px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px 0 10px;
+  border-radius: 25px;
+  position: relative;
+
+  .img-container {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 5px;
+    right: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card-text {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .pm10 {
+      width: 100px;
+      height: 100%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-position: bottom center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      &.좋음 {
+        background-color: skyblue;
+      }
+      &.알수없음 {
+        background-color: gray;
+      }
+      &.보통 {
+        background-color: rgb(139, 205, 40);
+      }
+      &.한때나쁨 {
+        background-color: rgb(255, 162, 0);
+      }
+      &.나쁨 {
+        background-color: red;
+      }
+      .pm10-grade {
+        font-weight: 900;
+        font-size: 22px;
+        margin-top: 18px;
+      }
+      .pm10-value {
+        margin-top: 7px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .title-total {
+      display: flex;
+      flex-direction: column;
+      .title {
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 7px 0 0 13px;
+        span {
+          font-size: 12px;
+        }
+      }
+      .all {
+        font-size: 12px;
+        margin: 7px 0 0 13px;
+        line-height: 15px;
+        color: rgb(69, 69, 69);
+        span {
+          font-weight: 700;
+        }
+        span.좋음 {
+          color: skyblue;
+        }
+        span.알수없음 {
+          color: gray;
+        }
+        span.보통 {
+          color: rgb(139, 205, 40);
+        }
+        span.한때나쁨 {
+          color: rgb(255, 162, 0);
+        }
+        span.나쁨 {
+          color: red;
+        }
+      }
+      .dataTime {
+        font-size: 11px;
+        margin: 6px 0 0 12px;
+        color: #000;
+      }
+    }
+  }
+}
