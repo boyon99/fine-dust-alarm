@@ -1,21 +1,18 @@
 .card {
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 10px 20px rgba(78, 78, 84, 0.5);
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(78, 78, 84, 0.5);
   width: $container-width -20px;
   height: 80px;
   display: flex;
   flex-direction: row;
   margin: 10px 10px 0 10px;
-  border-radius: 25px;
   position: relative;
 
   .img-container {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    border-radius: 50%;
-    border: 2px solid white;
     top: 5px;
     right: 10px;
     img {
@@ -29,8 +26,8 @@
     .pm10 {
       width: 100px;
       height: 100%;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
       background-position: bottom center;
       background-size: cover;
       display: flex;
@@ -60,7 +57,7 @@
       .pm10-value {
         margin-top: 7px;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
       }
     }
     .title-total {
