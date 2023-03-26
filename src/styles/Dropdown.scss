@@ -1,4 +1,4 @@
-$dropdown-color: rgba(#192059, 0.9);
+$dropdown-color: rgba(#192059, 1);
 
 .menu {
   z-index: 999;
@@ -15,13 +15,11 @@ $dropdown-color: rgba(#192059, 0.9);
     width: 50px;
     font-size: 12px;
     padding: 7px 0;
-    color: #333;
     text-decoration: none;
     border-radius: 10px;
-    box-shadow: $dropdown-color 0px 0px 0px 3px;
-    background-color: transparent;
-    color: #000;
+    background-color: $dropdown-color;
     cursor: pointer;
+    color: #fff;
   }
   button {
     width: 100%;
@@ -99,6 +97,8 @@ $dropdown-color: rgba(#192059, 0.9);
     background-color: rgba($color: #a9b6c5, $alpha: 1);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     text-align: left;
+    max-height: 400px;
+    overflow: scroll;
 
     li {
       float: none;
