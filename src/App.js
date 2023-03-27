@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import Favorites from './components/Favorites'
 import FullMap from './components/FullMap'
 import axios from 'axios';
+import TemporaryData from './data/data.json'
 
 const getParameters = {
   serviceKey: 'Kr/oZVHBBoGbx2tj2VIEb91xWXHevtNNotfWYj0ZZSiZlaNDLZ6H607o6DUepfIZH7Y+ORcVESi2AsIxH8KUVA==',
@@ -19,7 +20,7 @@ const getParameters = {
 
 function App() {
   let [inner, setInner] = useState("none")
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(TemporaryData)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +36,7 @@ function App() {
     }
     fetchData()
   }, [])
-
+  console.log(data)
   return (
     <React.Fragment>
       <Reset />

@@ -3,31 +3,27 @@ import Dropdowm from './Dropdown'
 import '../styles/MyLocation.scss'
 import Card from './Card';
 import SidoName from '../data/SidoName';
-import TemporaryData from '../data/data.json'
-import { useSelector, useDispatch } from 'react-redux';
-import { setSelectLocation1, setSelectLocation2 } from '../store/selectLocation';
+import { useSelector } from 'react-redux';
 
 
 const MyLocation = ({ Data }) => {
-  let dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setSelectLocation1(localStorage.getItem('sidoData')))
-    dispatch(setSelectLocation2(localStorage.getItem('stationData')))
-  }, [])
-
   let select = useSelector((state) => { return state.selectLocation })
-  let [data] = useState(TemporaryData.response.body.items)
+  let [data, setData] = useState(Data.response.body.items)
   useEffect(() => {
-    Data === null ? TemporaryData.response.body.items : Data.response.body.items
+    setData(Data.response.body.items)
   }, [Data])
+
   let dropdownData = data.filter((arr) => {
     if (arr.sidoName === select[0]) {
       return true
     }
   }).map((arr) => { return arr.stationName })
+
   let cardData = data.filter((arr) => {
     if (arr.stationName === select[1]) return true
   })
+
+  console.log(cardData)
   return (
     <div className='mylocation'>
       <div className='dropdown-container'>
@@ -41,7 +37,7 @@ const MyLocation = ({ Data }) => {
       </div>
 
       <div className='cards'>
-        <Card data={cardData[0]} />
+        {cardData.length === 0 ? <div className='frist'>지역을 설정해주세요.</div> : <Card data={cardData[0]} />}
       </div>
     </div>
   );

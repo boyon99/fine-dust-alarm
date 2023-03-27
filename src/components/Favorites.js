@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Favorites.scss'
 import Card from './Card';
-import TemporaryData from '../data/data.json'
 import { useSelector } from 'react-redux';
 
 const Favorites = ({ Data }) => {
 
   let select = useSelector((state) => { return state.selectFavorites })
-  let [data] = useState(TemporaryData.response.body.items)
-  useEffect(() => {
-    Data === null ? TemporaryData.response.body.items : Data.response.body.items
-  }, [Data])
+  let [data] = useState(Data.response.body.items)
+
   let cardData = data.filter((arr) => {
     if (select.includes(arr.stationName)) return true
   })
