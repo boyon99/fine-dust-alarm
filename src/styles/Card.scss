@@ -40,7 +40,8 @@
       &.좋음 {
         background-color: skyblue;
       }
-      &.알수없음 {
+      &.알수없음,
+      &.undefined {
         background-color: gray;
       }
       &.보통 {
@@ -86,7 +87,8 @@
         span.좋음 {
           color: skyblue;
         }
-        span.알수없음 {
+        span.알수없음,
+        span.undefined {
           color: gray;
         }
         span.보통 {

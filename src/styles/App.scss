@@ -4,7 +4,10 @@
 
 .App {
   font-family: 'IBM Plex Sans KR', sans-serif !important;
-  background-color: #cecdcd;
+  background-color: #192059;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23192059' cx='50' cy='0' r='50'/%3E%3Cg fill='%23162a65' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23103570' cx='50' cy='100' r='50'/%3E%3Cg fill='%2306407b' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23004a85' cx='50' cy='200' r='50'/%3E%3Cg fill='%23005590' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23006099' cx='50' cy='300' r='50'/%3E%3Cg fill='%23006ba3' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%230076ab' cx='50' cy='400' r='50'/%3E%3Cg fill='%230081b4' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23008dbc' cx='50' cy='500' r='50'/%3E%3Cg fill='%230098c3' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300a3ca' cx='50' cy='600' r='50'/%3E%3Cg fill='%2308afd1' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%2324bad7' cx='50' cy='700' r='50'/%3E%3Cg fill='%2336c6dd' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2347d1e3' cx='50' cy='800' r='50'/%3E%3Cg fill='%2358dde8' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%2368e8ed' cx='50' cy='900' r='50'/%3E%3Cg fill='%2379f4f2' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%2389FFF7' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
   width: 100vw;
   height: 100vh;
   display: flex;
