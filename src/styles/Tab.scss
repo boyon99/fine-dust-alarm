@@ -4,7 +4,7 @@ $gradient-color: linear-gradient(-60deg, #192059 0%, #18464d 100%);
 @keyframes fadeInDown {
   0% {
     opacity: 1;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 94%, 0);
   }
   100% {
     opacity: 1;
@@ -19,7 +19,7 @@ $gradient-color: linear-gradient(-60deg, #192059 0%, #18464d 100%);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 94%, 0);
   }
 }
 
@@ -72,12 +72,13 @@ $gradient-color: linear-gradient(-60deg, #192059 0%, #18464d 100%);
 }
 
 .false {
-  opacity: 0;
+  opacity: 1;
   animation: fadeInUp 2s;
   width: $container-width;
   height: $tabs-height;
   display: flex;
   border-radius: 10px;
+  transform: translate3d(0, 94%, 0);
   background-image: $gradient-color;
   .tab {
     color: #fff;
