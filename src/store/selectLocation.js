@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-let sido = localStorage.getItem('sidoData')
 let station = localStorage.getItem('stationData')
 
 
 let selectLocation = createSlice({
   name: 'selectLocation',
   initialState: [
-    sido, station
+    "서울", station, "서울"
   ],
   reducers: {
     setSelectLocation1(state, action) {
@@ -15,9 +14,12 @@ let selectLocation = createSlice({
     },
     setSelectLocation2(state, action) {
       state[1] = action.payload
+    },
+    setSelectLocation3(state, action) {
+      state[2] = action.payload
     }
   }
 })
 
-export let { setSelectLocation1, setSelectLocation2 } = selectLocation.actions
+export let { setSelectLocation1, setSelectLocation2, setSelectLocation3 } = selectLocation.actions
 export default selectLocation

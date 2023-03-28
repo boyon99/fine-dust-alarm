@@ -8,17 +8,22 @@ import Favorites from './components/Favorites'
 import FullMap from './components/FullMap'
 import axios from 'axios';
 import TemporaryData from './data/data.json'
+import { useSelector } from 'react-redux';
 
-const getParameters = {
-  serviceKey: process.env.REACT_APP_SERVICEKEY,
-  returnType: 'json',
-  numOfRows: '10',
-  pageNo: '1',
-  sidoName: '서울',
-  ver: '1.0',
-}
+
 
 function App() {
+  let title = useSelector((state) => { return state.selectLocation })
+
+  const getParameters = {
+    serviceKey: process.env.REACT_APP_SERVICEKEY,
+    returnType: 'json',
+    numOfRows: '10',
+    pageNo: '1',
+    sidoName: title[2],
+    ver: '1.0',
+  }
+
   let [inner, setInner] = useState("none")
   const [data, setData] = useState(TemporaryData)
 
@@ -29,13 +34,13 @@ function App() {
           'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty', { params: getParameters }
         )
         setData(res.data)
-        console.log("success")
+        console.log("success", res.data)
       } catch (e) {
         console.log("fail: ", e)
       }
     }
     fetchData()
-  }, [])
+  }, [title])
   return (
     <React.Fragment>
       <Reset />

@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import '../styles/Dropdown.scss'
-import { setSelectLocation1, setSelectLocation2 } from '../store/selectLocation';
+import { setSelectLocation1, setSelectLocation2, setSelectLocation3 } from '../store/selectLocation';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Dropdown = ({ list, num, change }) => {
@@ -19,6 +19,7 @@ const Dropdown = ({ list, num, change }) => {
                   <li key={i}><button onClick={() => {
                     if (num === 0) {
                       dispatch(setSelectLocation1(arr))
+                      dispatch(setSelectLocation3(arr))
                       if (change) {
                         localStorage.setItem('sidoData', arr)
                       }

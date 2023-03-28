@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropdowm from './Dropdown'
 import '../styles/FullMap.scss'
 import Card from './Card';
@@ -9,8 +9,11 @@ const FullMap = ({ Data }) => {
 
 
   let select = useSelector((state) => { return state.selectLocation })
-  let [data] = useState(Data.response.body.items)
+  let [data, setData] = useState(Data.response.body.items)
 
+  useEffect(() => {
+    setData(Data.response.body.items)
+  }, [Data])
 
   let cardData = data.filter((arr) => {
     if (select[0] === "전국") return true
