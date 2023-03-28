@@ -10,7 +10,7 @@ import axios from 'axios';
 import TemporaryData from './data/data.json'
 
 const getParameters = {
-  serviceKey: 'Kr/oZVHBBoGbx2tj2VIEb91xWXHevtNNotfWYj0ZZSiZlaNDLZ6H607o6DUepfIZH7Y+ORcVESi2AsIxH8KUVA==',
+  serviceKey: process.env.REACT_APP_SERVICEKEY,
   returnType: 'json',
   numOfRows: '10',
   pageNo: '1',
@@ -29,14 +29,13 @@ function App() {
           'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty', { params: getParameters }
         )
         setData(res.data)
-        console.log(data)
+        console.log("success")
       } catch (e) {
-        console.log(e)
+        console.log("fail: ", e)
       }
     }
     fetchData()
   }, [])
-  console.log(data)
   return (
     <React.Fragment>
       <Reset />
@@ -46,7 +45,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MyLocation Data={data} />} />
               <Route path="/favorites" element={<Favorites Data={data} />} />
-              <Route path="/fullmap" element={<FullMap Data={data} inner={inner} />} />
+              <Route path="/fullmap" element={<FullMap Data={data} />} />
             </Routes>
           </div>
           <div className='tab-container' onMouseEnter={() => { setInner(() => "true") }} onMouseLeave={() => { setInner(() => "false") }}>
