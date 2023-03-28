@@ -500,7 +500,7 @@ module.exports = function (webpackEnv) {
                 loader: require.resolve("sass-loader"),
                 options: {
                   sassOptions: {
-                    includePaths: [paths.appSrc + "/config"],
+                    includePaths: [paths.appSrc + "/constants"],
                   },
                   additionalData: "@import '_variables';",
                 },
