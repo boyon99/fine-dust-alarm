@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Dropdowm from './Dropdown'
 import '../styles/FullMap.scss'
 import Card from './Card';
 import SidoName from '../data/SidoName';
 import { useSelector } from 'react-redux';
 
-const FullMap = ({ Data, inner }) => {
-  let [zIndex, setZIndex] = useState(inner)
-  useEffect(() => {
-    return (
-      setZIndex(inner)
-    )
-  }, [inner])
+const FullMap = ({ Data }) => {
+
 
   let select = useSelector((state) => { return state.selectLocation })
   let [data] = useState(Data.response.body.items)
@@ -29,7 +24,7 @@ const FullMap = ({ Data, inner }) => {
         <div className='dropdown-1'><Dropdowm list={SidoName} num={0} /></div>
       </div>
 
-      <div className={'cards cards-' + zIndex}>
+      <div className='cards'>
         {cardData.map((arr, i) => {
           return (
             <Card data={arr} key={"card-" + i} />
