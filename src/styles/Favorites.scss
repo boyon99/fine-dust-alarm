@@ -1,32 +1,31 @@
 .favorites {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+
   .dropdown-container {
     position: relative;
     h1 {
+      position: absolute;
       font-size: 16px;
       font-weight: bolder;
       width: 100px;
-      margin: 22px 0 0 10px;
+      top: 22px;
+      left: 10px;
     }
     .dropdown-1 {
       position: absolute;
-      right: 75px;
+      right: 10px;
       top: 5px;
       opacity: 0.8;
-    }
-    .dropdown-2 {
-      position: absolute;
-      right: 8px;
-      top: 5px;
-      opacity: 0.8;
+      &:hover {
+        z-index: 15;
+      }
     }
   }
   .cards {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    height: 450px;
+    margin-top: 50px;
+    height: 430px;
     overflow: scroll;
   }
 }

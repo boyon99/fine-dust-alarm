@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Favorites.scss'
 import Card from '../components/Card';
 import { useSelector } from 'react-redux';
+import Dropdowm from '../components/Dropdown'
+import SidoName from '../data/SidoName';
+
 
 const Favorites = ({ Data }) => {
 
@@ -19,12 +22,13 @@ const Favorites = ({ Data }) => {
     <div className='favorites'>
       <div className='dropdown-container'>
         <h1>즐겨찾기</h1>
+        <div className='dropdown-1'><Dropdowm list={SidoName} num={0} /></div>
       </div>
 
       <div className='cards'>
         {cardData.map((arr, i) => {
           return (
-            <Card data={arr} key={i} />
+            <Card data={arr} key={"card-" + i} />
           )
         })}
       </div>
