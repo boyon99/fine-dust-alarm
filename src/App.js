@@ -2,10 +2,10 @@ import './styles/App.scss';
 import React, { useEffect, useState } from 'react';
 import { Reset } from 'styled-reset';
 import Tab from './components/Tab';
-import MyLocation from './components/MyLocation'
+import MyLocation from './pages/MyLocation'
 import { Routes, Route } from 'react-router-dom'
-import Favorites from './components/Favorites'
-import FullMap from './components/FullMap'
+import Favorites from './pages/Favorites'
+import FullMap from './pages/FullMap'
 import axios from 'axios';
 import TemporaryData from './data/data.json'
 import { useSelector } from 'react-redux';

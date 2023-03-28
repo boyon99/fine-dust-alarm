@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Favorites.scss'
-import Card from './Card';
+import Card from '../components/Card';
 import { useSelector } from 'react-redux';
 
 const Favorites = ({ Data }) => {

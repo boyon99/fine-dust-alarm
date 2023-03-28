@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Dropdowm from './Dropdown'
+import Dropdowm from '../components/Dropdown'
 import '../styles/MyLocation.scss'
-import Card from './Card';
+import Card from '../components/Card';
 import SidoName from '../data/SidoName';
 import { useSelector } from 'react-redux';
 

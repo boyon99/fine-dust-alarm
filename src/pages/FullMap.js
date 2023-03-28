@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Dropdowm from './Dropdown'
+import Dropdowm from '../components/Dropdown'
 import '../styles/FullMap.scss'
-import Card from './Card';
+import Card from '../components/Card';
 import SidoName from '../data/SidoName';
 import { useSelector } from 'react-redux';
 
