@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Dropdowm from './Dropdown'
 import '../styles/MyLocation.scss'
 import Card from './Card';
@@ -8,8 +8,11 @@ import { useSelector } from 'react-redux';
 
 const MyLocation = ({ Data }) => {
   let select = useSelector((state) => { return state.selectLocation })
-  let [data] = useState(Data.response.body.items)
+  let [data, setData] = useState(Data.response.body.items)
 
+  useEffect(() => {
+    setData(Data.response.body.items)
+  }, [Data])
 
   let dropdownData = data.filter((arr) => {
     if (arr.sidoName === select[0]) {
