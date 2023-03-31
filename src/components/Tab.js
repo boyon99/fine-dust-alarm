@@ -39,6 +39,7 @@ const Tab = ({ inner }) => {
   );
 };
 
+// inner 값에 따라 탭 에니메이션 구현
 Tab.defaultProps = {
   inner: 'none'
 }

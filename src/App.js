@@ -13,7 +13,16 @@ import { useSelector } from 'react-redux';
 
 
 function App() {
+
+  // store에 저장된 마지막으로 사용된 지역 및 도시 이름 가져오기
   let title = useSelector((state) => { return state.selectLocation })
+
+  // 탭 드롭다운 애니메이션 구현을 위한 state
+  let [inner, setInner] = useState("none")
+
+  // axois 오류를 위한 기본 데이터를 초기값으로 설정
+  // 미세먼지를 위한 데이터
+  const [data, setData] = useState(TemporaryData)
 
   const getParameters = {
     serviceKey: process.env.REACT_APP_SERVICEKEY,
@@ -23,9 +32,6 @@ function App() {
     sidoName: title[2],
     ver: '1.0',
   }
-
-  let [inner, setInner] = useState("none")
-  const [data, setData] = useState(TemporaryData)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +47,8 @@ function App() {
     }
     fetchData()
   }, [title])
+
+
   return (
     <React.Fragment>
       <Reset />
@@ -53,6 +61,7 @@ function App() {
               <Route path="/fullmap" element={<FullMap Data={data} />} />
             </Routes>
           </div>
+          {/* 탭 메뉴 안에 마우스가 위치하는지 여부에 따라 탭 이벤트 구현 */}
           <div className='tab-container' onMouseEnter={() => { setInner(() => "true") }} onMouseLeave={() => { setInner(() => "false") }}>
             <Tab inner={inner} />
           </div>

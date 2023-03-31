@@ -8,16 +8,20 @@ import SidoName from '../data/SidoName';
 
 const Favorites = ({ Data }) => {
 
+  // store에 저장된 좋아요 항목 가져오기
   let select = useSelector((state) => { return state.selectFavorites })
-  let [data, setData] = useState(Data.response.body.items)
 
+  // 미세먼지 데이터
+  let [data, setData] = useState(Data.response.body.items)
   useEffect(() => {
     setData(Data.response.body.items)
   }, [Data])
 
+  // 좋아요에 표시된 항목의 지역이 포함된 데이터만 가져오기
   let cardData = data.filter((arr) => {
     if (select.includes(arr.stationName)) return true
   })
+
   return (
     <div className='favorites'>
       <div className='dropdown-container'>
