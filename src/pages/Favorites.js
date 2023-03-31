@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import Dropdowm from '../components/Dropdown'
 import SidoName from '../data/SidoName';
 
-
 const Favorites = ({ Data }) => {
 
   // store에 저장된 좋아요 항목 가져오기

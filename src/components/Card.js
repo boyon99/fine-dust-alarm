@@ -16,7 +16,6 @@ const Card = ({ data }) => {
   // 즐겨찾기 데이터를 업데이트하기 위한 state
   let [star, setStar] = useState(0)
 
-
   // 즐겨찾기 항목이 업데이트 될 경우 즐겨찾기 데이터의 길이값을 업데이트
   useEffect(() => {
     setStar(likeFilter.length)

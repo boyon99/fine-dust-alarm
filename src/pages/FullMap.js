@@ -12,6 +12,7 @@ const FullMap = ({ Data }) => {
 
   // 미세먼지 데이터
   let [data, setData] = useState(Data.response.body.items)
+
   useEffect(() => {
     setData(Data.response.body.items)
   }, [Data])

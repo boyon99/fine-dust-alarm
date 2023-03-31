@@ -10,8 +10,6 @@ import axios from 'axios';
 import TemporaryData from './data/data.json'
 import { useSelector } from 'react-redux';
 
-
-
 function App() {
 
   // store에 저장된 마지막으로 사용된 지역 및 도시 이름 가져오기

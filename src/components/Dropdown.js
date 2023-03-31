@@ -57,4 +57,5 @@ const Dropdown = ({ list, num, change }) => {
   }
 };
 
+
 export default Dropdown;

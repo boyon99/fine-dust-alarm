@@ -44,4 +44,5 @@ Tab.defaultProps = {
   inner: 'none'
 }
 
+
 export default Tab;
