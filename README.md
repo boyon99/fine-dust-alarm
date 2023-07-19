@@ -38,21 +38,21 @@
 <tr>
     <th>
       <div>
-       <img width="280" height="520" alt="스크린샷 2023-07-19 오후 10 53 59" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/2728a1b7-9a61-4e26-9efd-81ffd0a923a5">
+       <img width="280" height="460" alt="스크린샷 2023-07-19 오후 10 53 59" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/2728a1b7-9a61-4e26-9efd-81ffd0a923a5">
       </div>
       <div align="center">
       My Location 페이지
       </div>
     </th>
     <th>
-      <div><img width="280" height="520" alt="스크린샷 2023-07-19 오후 10 54 05" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/00d9e3dd-15ab-4085-883e-b79de21624f8">
+      <div><img width="280" height="460" alt="스크린샷 2023-07-19 오후 10 54 05" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/00d9e3dd-15ab-4085-883e-b79de21624f8">
       </div>
      <div align="center">
       FullMap 페이지
       </div>
     </th>
      <th>
-      <div><img width="280" height="520" alt="스크린샷 2023-07-19 오후 10 54 11" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/2db8810a-1a0f-4785-a7dd-ab73059779d9">
+      <div><img width="280" height="460" alt="스크린샷 2023-07-19 오후 10 54 11" src="https://github.com/boyon99/fine-dust-alarm/assets/64579380/2db8810a-1a0f-4785-a7dd-ab73059779d9">
       </div>
      <div align="center">
       Favorite 페이지
